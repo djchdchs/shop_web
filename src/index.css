@@ -20,6 +20,10 @@ body {
 
 
 /* стили для шапки сайта */
+header {
+  position: relative;
+}
+
 .logo {
   font-weight: 600;
   font-size: 20px;
@@ -39,6 +43,29 @@ li {
 
 li:hover {
   opacity: 0.5;
+}
+
+.shop-cart-button {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+.shop-cart-button:hover, .shop-cart-button.active {
+  color: #dc3d3d;
+  transform: scale(1.2);
+}
+
+.shop-cart {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  min-height: 100px;
+  background: #fafafa;
+  -webkit-box-shadow: 4px 5px 15px -7px #606060; 
+  box-shadow: 4px 5px 15px -7px #606060; 
+  z-index: 1000;
 }
 
 .presentation {
