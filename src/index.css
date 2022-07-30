@@ -20,28 +20,28 @@ body {
 
 
 /* стили для шапки сайта */
-header .logo {
+.logo {
   font-weight: 600;
   font-size: 20px;
 }
 
-header .nav {
+.nav {
   float: right;
   list-style: none;
 }
 
-header li {
+li {
   display: inline;
   margin-left: 25px;
   cursor: pointer;
   transition: opacity 500ms ease;
 }
 
-header li:hover {
+li:hover {
   opacity: 0.5;
 }
 
-header .presentation {
+.presentation {
   margin: 50px 0;
   background: url('./img/bg.jpg') no-repeat;
   width: 100%;
@@ -53,7 +53,7 @@ header .presentation {
   position: relative;
 }
 
-header .presentation::after {
+.presentation::after {
   content: 'Лучшие товары для вашего дома';
   position: absolute;
   top: 100px;
@@ -64,7 +64,7 @@ header .presentation::after {
   color: #fff;
 }
 
-header .presentation::before {
+.presentation::before {
   content: 'По низким ценам';
   position: absolute;
   top: 250px;
@@ -73,6 +73,65 @@ header .presentation::before {
   font-size: 15px;
   font-weight: 300;
   color: #fff;
+}
+
+
+
+/* стили для блока с товарами */
+.Product__items {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Product__item-box {
+  width: 30%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.Product__item-img {
+  width: 100%;
+  height: 384px;
+  border-radius: 10px;
+  transition: transform 500ms ease;
+}
+
+.Product__item-img:hover {
+  transform: scale(1.05);
+}
+
+.Product__item-title, .Product__item-desc, .Product__item-price {
+  margin: 10px 20px;
+  color: #333;
+}
+
+.Product__item-price {
+  font-weight: 600;
+  color: #5fa36a;
+}
+
+.add-to-cart {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #ca5252;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.2);
 }
 
 
